@@ -1,0 +1,45 @@
+class Pessoa{ // nova classe
+    val nome: String = "John Doe"
+    var idade: Int = 20 // inicializa propriedade
+    
+    fun saudacoes(fnome: String,fidade: Int){
+        println("Oi, meu nome é " + fnome + " e tenho " + fidade + " anos de idade.") // mensagem
+    }
+    
+    fun podeVotar(fidade: Int):Boolean{ // retorna verdadeiro ou falso
+    	if (fidade > 15){
+       	return true
+        }
+        else{
+        return false
+        }
+    }
+    
+}
+
+fun main(){
+    var i: Int // var para repetição com for
+    val limite: Int = 3 // define final do for
+    var voto: Boolean // guarda o resultado da função podeVotar
+    var pessoa1 = Pessoa() // novo objeto do tipo Pessoa
+    pessoa1.saudacoes(pessoa1.nome,pessoa1.idade) 
+    if (pessoa1.idade > 17){
+        println(pessoa1.nome + " é maior de idade")
+    }
+    else{
+       println(pessoa1.nome + " é menor de idade") 
+    }
+    println("Contagem:")
+    for (i in 1..limite){ // começa a contar de 1 até o valor de limite
+        println(i)
+    }
+    i = 15
+    println("Número alterado:" + i)
+    voto = pessoa1.podeVotar(pessoa1.idade)
+    if (voto == true){
+        println(pessoa1.nome+" pode votar.")
+    }
+    else{
+        println(pessoa1.nome+" não pode votar.")
+    }
+}
