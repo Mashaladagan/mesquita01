@@ -1,0 +1,114 @@
+1)fun main(){
+    var n1 : Int = 10
+    var n2 : Int = 5
+	var opcao : Int = 4
+    when (opcao)
+    {
+        1 -> println(n1 + n2)
+        2 -> println(n1 - n2)
+        3 -> println(n1 * n2)
+        4 -> if (n2 == 0) println("nao pode dividir por zero.")
+        else println(n1 / n2)
+    }
+ }
+
+2)fun main(){
+    var n1 : Int = 4
+    var i : Int
+    var j : Int = n1
+    var resultado : Int = n1
+    if (n1 < 1) println("numero invalido")
+else
+{
+    for (i in 1..n1-1){
+        j--
+    	resultado = resultado * j
+     }
+    println("fatorial:"+resultado)
+ }
+}
+
+3)fun main(){
+	var i: Int
+    var j: Int
+    var string: String = "radar"
+    var string2: String = ""
+    var tamanho: Int = string.length
+    j = string.length-1
+    for (i in 0..tamanho-1){
+    	string2 = string2 + string[j]
+        j--
+     }
+    if (string.compareTo(string2) == 0)
+        println("e um palindromo")
+        else
+        {
+        println("nao e um palindromo")
+        }
+ }
+
+4)class Carro{
+    var modelo: String = ""
+    var marca: String = ""
+    var ano: Int = 0
+    
+     fun descricao(fmodelo: String,fmarca: String,fano: Int){
+        println("Modelo: " + fmodelo)
+        println("Marca: " + fmarca)
+        println("Ano: " + fano)
+    }
+}
+
+fun main(){
+ var carro1 = Carro()
+ carro1.modelo = "Onix"
+ carro1.marca = "Chevrolet"
+ carro1.ano = 2025
+ 
+ carro1.descricao(carro1.modelo,carro1.marca,carro1.ano)
+ 
+ }
+
+5)fun main(){
+    var n1 : Int = 10
+    var i : Int
+    var j : Int
+    for (i in 1..n1){
+        if (i % 2 == 0)
+        {
+            //nada
+        }
+        else
+        {
+            println(i)
+        }
+     }
+ }
+
+6)fun main(){
+   var media : Int = 0
+   var lista = arrayOf(6,7,8)
+   var tamanho = lista.size
+    if (tamanho < 2)
+    {
+    println("lista pequena demais")
+    }
+    else
+    {
+ for (i in 0..tamanho-1) {
+     media = media + lista[i]
+ }
+ println("media: " + media / tamanho)
+    }
+}
+
+7)fun main(){
+	var i: Int
+    var cont: Int = 0
+    var string: String = "aeiou"
+    var tamanho: Int = string.length
+    for (i in 0..tamanho-1){
+    if (string[i].compareTo('a')==0 || string[i].compareTo('e')==0 || string[i].compareTo('i')==0 || string[i].compareTo('o')==0 || string[i].compareTo('u')==0) cont++
+     }
+    println(cont)
+ }
